@@ -1,0 +1,21 @@
+<div class="page-content">
+  <div class="row">
+    
+    <div ng-if="!connectedTwitter" class="col-100">
+      <div class="col-100">
+        <div class="content-block-title">
+          <h1>Usuario</h1>
+        </div>
+        <button ng-click="connectButton()" type="button" class="btn btn-primary">Connect Twitter</button>
+      </div>
+    </div>
+    <div ng-if="connectedTwitter" class="col-100">
+      <div class="content-block-title">
+        <img ng-src="{{ profileImage }}" alt="">
+        {{ profileName }}
+      </div>
+      <button ng-click="signOut()" type="button" class="btn btn-primary">Sign Out</button>
+    </div>
+  </div>
+
+</div>
