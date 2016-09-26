@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('parkWebApp')
-        .constant("baseURL","http://localhost:4000/api")
+        .constant("baseURL","https://desolate-ravine-88557.herokuapp.com/api")
         .constant("randomUserURL", "https://randomuser.me/api/")
         .service('gameService', ['$resource', 'baseURL', function ($resource, baseURL) {
 
