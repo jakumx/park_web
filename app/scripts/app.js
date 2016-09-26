@@ -35,7 +35,10 @@ angular
     mainView = parkWebApp.addView('.view-main', {});
 
   })
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
+
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
     $stateProvider
       .state('app', {
         url: '/',

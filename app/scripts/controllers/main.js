@@ -8,7 +8,7 @@
  * Controller of the parkWebApp
  */
 angular.module('parkWebApp')
-  .controller('MainCtrl', ['$scope', 'parkService', 'randomUserService', 'globalService', 'gameService',  function ($scope, parkService, randomUserService, globalService, gameService) {
+  .controller('MainCtrl', ['$scope', 'parkService', 'randomUserService', 'gameService',  function ($scope, parkService, randomUserService, gameService) {
     $scope.parkImages = [];
     $scope.randomUsers = [];
     $scope.rdmSrsFlag = false;
@@ -18,11 +18,9 @@ angular.module('parkWebApp')
       .$promise.then(
         function (response) {
           $scope.park = response.data;
-          console.log($scope.park.name);
-          globalService.setParkName($scope.park.name);
         },
         function (fail) {
-          console.log(fail);
+          console.error(fail);
         }
       );
 
@@ -48,7 +46,7 @@ angular.module('parkWebApp')
           $scope.gameFlag = true;
         },
         function (fail) {
-          console.log(fail);
+          console.error(fail);
         }
       );
 

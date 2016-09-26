@@ -2,19 +2,24 @@
   <div class="row">
     
     <div ng-if="!connectedTwitter" class="col-100">
-      <div class="col-100">
-        <div class="content-block-title">
-          <h1>Usuario</h1>
-        </div>
-        <button ng-click="connectButton()" type="button" class="btn btn-primary">Connect Twitter</button>
+      <div class="content-block-title">
+        <h1>Usuario</h1>
       </div>
+      <p class="buttons-row">
+        <button ng-click="connectButton()" type="button" class="button button-big button-fill button-raised color-blue">Connect Twitter</button>
+      </p>
     </div>
     <div ng-if="connectedTwitter" class="col-100">
       <div class="content-block-title">
         <img ng-src="{{ profileImage }}" alt="">
         {{ profileName }}
       </div>
-      <button ng-click="signOut()" type="button" class="btn btn-primary">Sign Out</button>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <p class="buttons-row">
+        <button ng-click="signOut()" type="button" class="button button-fill button-raised color-red">Sign Out</button>
+      </p>
     </div>
   </div>
 

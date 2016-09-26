@@ -25,15 +25,6 @@ angular.module('parkWebApp')
 
         }])
         .service('globalService', [function () {
-          var parkName = null;
-
-          this.setParkName = function (name) {
-            parkName = name;
-          };
-
-          this.getParkName = function () {
-            return parkName;
-          };
 
         }])
         .factory('twitterService', [function() {
