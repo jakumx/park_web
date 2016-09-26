@@ -35,13 +35,13 @@ angular
     mainView = parkWebApp.addView('.view-main', {});
 
   })
-  .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $http) {
+  .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
 
     $httpProvider.defaults.useXDomain = true;
     $httpProvider.defaults.withCredentials = true;
     delete $httpProvider.defaults.headers.common["X-Requested-With"];
-    $http.defaults.headers.put = {
+    $httpProvider.defaults.headers.put = {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With'
