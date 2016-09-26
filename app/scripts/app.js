@@ -35,7 +35,7 @@ angular
     mainView = parkWebApp.addView('.view-main', {});
 
   })
-  .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $http) {
 
 
     $httpProvider.defaults.useXDomain = true;
