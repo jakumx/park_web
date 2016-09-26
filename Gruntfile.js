@@ -476,5 +476,5 @@ module.exports = function (grunt) {
     'build'
   ]);
 
-  grunt.registerTask('heroku', [ 'clean:dist','wiredep', 'useminPrepare', 'concurrent:dist', 'copy:dist']);
+  grunt.registerTask('heroku', ['build']);
 };
