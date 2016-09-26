@@ -36,7 +36,7 @@ angular.module('parkWebApp')
           };
 
         }])
-        .factory('twitterService', ['$q', function($q) {
+        .factory('twitterService', [function() {
           var authorizationResult = false;
 
           return {
@@ -75,7 +75,7 @@ angular.module('parkWebApp')
                   resolve(data);
                 }).fail(function (fail) {
                   reject(fail);
-                })
+                });
               });
               return promise;
             }

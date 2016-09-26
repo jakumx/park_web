@@ -24,6 +24,5 @@
   },
   "_source": "https://github.com/oauth-io/oauth-js.git",
   "_target": "^0.5.2",
-  "_originalSource": "oauth-js",
-  "_direct": true
+  "_originalSource": "oauth-js"
 }

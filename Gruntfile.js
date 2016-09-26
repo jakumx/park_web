@@ -313,7 +313,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.app %>/images',
           src: '{,*/}*.svg',
-          dest: '<%= yeoman.dist %>/images'
+          dest: '<%= yeoman.dist %>/img'
         }]
       }
     },
@@ -476,5 +476,5 @@ module.exports = function (grunt) {
     'build'
   ]);
 
-  grunt.registerTask('heroku', ['build']);
+  grunt.registerTask('heroku', [ 'clean:dist','wiredep', 'useminPrepare', 'concurrent:dist', 'copy:dist']);
 };
